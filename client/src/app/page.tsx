@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import Image from "next/image";
 
 export default function Home() {
@@ -20,6 +22,12 @@ export default function Home() {
             </code>{" "}
             file.
           </h1>
+
+          <Button className="p-10" variant={"outline"}>
+            Mua khóa học Next.js
+          </Button>
+          <Input type="text" name="firstname" />
+
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             Looking for a starting point or more instructions? Head over to{" "}
             <a
