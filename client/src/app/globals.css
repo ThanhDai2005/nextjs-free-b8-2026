@@ -127,4 +127,15 @@
   html {
     @apply font-sans;
   }
+
+  /* Đặt đoạn này ở cuối cùng của file CSS, không bọc trong @layer nào cả Khi nằm ngoài tầng base, độ ưu tiên của nó sẽ cao hơn và ép trình duyệt phải nhận màu đỏ */
+  h1,
+  h2,
+  h3 {
+    @apply text-red-500;
+  }
+}
+
+@utility text-mini {
+  font-size: var(--text-xs);
 }

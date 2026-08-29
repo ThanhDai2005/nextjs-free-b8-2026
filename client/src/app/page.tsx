@@ -23,7 +23,7 @@ export default function Home() {
             file.
           </h1>
 
-          <Button className="p-10" variant={"outline"}>
+          <Button className="p-10 text-mini" variant={"outline"}>
             Mua khóa học Next.js
           </Button>
           <Input type="text" name="firstname" />
