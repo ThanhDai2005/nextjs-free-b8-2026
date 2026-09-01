@@ -1,7 +1,12 @@
+import { ModeToggle } from "@/components/ui/mode-toggle";
+
 const RegisterPage = () => {
   return (
     <>
-      <div>RegisterPage</div>
+      <div>
+        <ModeToggle />
+        RegisterPage
+      </div>
     </>
   );
 };
