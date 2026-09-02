@@ -1,13 +1,12 @@
-import { ModeToggle } from "@/components/ui/mode-toggle";
+import { SignupForm } from "@/components/signup-form";
 
 const RegisterPage = () => {
   return (
-    <>
-      <div>
-        <ModeToggle />
-        RegisterPage
+    <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
+      <div className="w-full max-w-sm">
+        <SignupForm />
       </div>
-    </>
+    </div>
   );
 };
 
