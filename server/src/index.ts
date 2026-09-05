@@ -24,9 +24,9 @@ const fastify = Fastify({
 const start = async () => {
   try {
     createFolder(path.resolve(envConfig.UPLOAD_FOLDER))
-    const whitelist = ['*']
+
     fastify.register(cors, {
-      origin: whitelist, // Cho phép tất cả các domain gọi API
+      origin: envConfig.IS_PRODUCTION ? envConfig.PRODUCTION_URL : 'http://localhost:3000',
       credentials: true // Cho phép trình duyệt gửi cookie đến server
     })
 

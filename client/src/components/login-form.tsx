@@ -50,6 +50,7 @@ export function LoginForm({
             "Content-Type": "application/json",
           },
           body: JSON.stringify(data),
+          credentials: "include",
         },
       );
 
@@ -65,6 +66,20 @@ export function LoginForm({
       }
 
       console.log("Login success:", result);
+
+      const resultFromNextServer = await fetch("/api/auth", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(result),
+        credentials: "include",
+      });
+
+      const result2 = await resultFromNextServer.json();
+
+      console.log(result2);
+
       toast.add({
         type: "success",
         description: result?.message,
